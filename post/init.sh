@@ -174,6 +174,7 @@ passwd net
 ## LUKSDISK
 echo "rd.luks.name=$(blkid -s UUID -o value $DISKPROC)=root root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf &&
 echo "data UUID=$(blkid -s UUID -o value $DISKDATA) none" >> /etc/crypttab 
+mkinitcpio -P
 
 ## NOTIF
 echo "
