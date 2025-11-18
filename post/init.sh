@@ -13,7 +13,6 @@ echo "en_US ISO-8859-1" >> /etc/locale.gen
 locale-gen &&
 
 ## INSTALL
-
 pacman -Syy --noconfirm &&
 pacman -S wireless-regdb \
     amd-ucode \
