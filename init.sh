@@ -159,4 +159,11 @@ bootctl --path=/boot/ install
 
 ## EXECUTE
 chmod +x /usr/xbin/* &&
-chmod +x /usr/pbin/*
+chmod +x /usr/pbin/* &&
+
+
+## ADMIN ADD
+userad -d /var/net -u 23 net &&
+usermod -aG wheel net &&
+chown -R net:net /var/net &&
+passwd net
