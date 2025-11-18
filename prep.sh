@@ -31,10 +31,10 @@ if [[ -e /dev/data/dock ]];then
 fi
 
 
+mount /dev/proc/root /mnt &&
+
 mkdir -p /mnt/{boot,home,opt,var,tmp,srv/http} && 
 
-
-mount /dev/proc/root /mnt &&
 mount -o uid=0,gid=0,dmask=007,fmask=007 /dev/nvme0n1p1 /mnt/boot/ &&
 mount /dev/proc/opts /mnt/opt &&
 mount /dev/proc/vars /mnt/var &&
