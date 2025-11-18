@@ -57,7 +57,6 @@ pacman -S linux-zen\
     lightdm \
     lightdm-webkit2-greeter \
     steam \
-    waydroid \
     kodi-gles \
     dolphin-emu \
     kwallet \
@@ -87,7 +86,7 @@ locale-gen &&
 ## EMULATOR
 
 ## android
-waydroid init -s GAPPS &&
+# waydroid init -s GAPPS &&
 
 
 ## switch
