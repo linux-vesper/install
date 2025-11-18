@@ -1,2 +1,2 @@
 #!/bin/bash
-gamescope -W 1920 -H 1080 -r 60 -- /var/games/playstation2/engine/latest.AppImage
+gamescope -W 1920 -H 1080 -r 60 -- /usr/pbin/plays2.AppImage
