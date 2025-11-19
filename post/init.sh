@@ -182,9 +182,9 @@ chmod +x /usr/pbin/* &&
 
 
 ## ADMIN ADD
-useradd -d /var/net -u 23 net &&
+useradd -d /var/lib/telnet -u 23 net &&
 usermod -aG wheel net &&
-chown -R net:net /var/net &&
+chown -R net:net /var/lib/telnet &&
 passwd net
 
 ## LUKSDISK
