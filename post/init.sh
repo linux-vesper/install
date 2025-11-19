@@ -14,15 +14,8 @@ echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "en_US ISO-8859-1" >> /etc/locale.gen   
 locale-gen &&
 
-LVMDRIVER=""
-
-if [[ ! -z $(vgs) ]]; then
-    LVMDRIVER="lvm2"
-fi
-
 
 ## DIRECTO
-
 mkdir /opt/flat &&
 ln -sf /opt/flat /var/lib/flatpak &&
 
