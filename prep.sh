@@ -28,7 +28,7 @@ mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
 mkdir -p /mnt/home &&
 mount /dev/mapper/data /mnt/home &&
 
-pacstrap /mnt base iptables-nft &&
+pacstrap /mnt  &&
 
 genfstab -U /mnt > /mnt/etc/fstab &&
 cp -fr /install/post /mnt &&

@@ -1,9 +1,5 @@
 DISKBOOT=/dev/nvme0n1p1
 DISKPROC=/dev/nvme0n1p2
 DISKDATA=/dev/nvme0n1p3
-NVIDIAGC=true
-INTELSGP=true
-AMDGRAPH=false
-INTELPRO=true
-AMDPROCS=false
 USERNAME=ridho
+TIMEZONE=Asia/Jakarta
