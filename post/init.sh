@@ -16,6 +16,7 @@ locale-gen &&
 
 ## INSTALL
 pacman -Syy --noconfirm &&
+pacman -S iptables-nft  --noconfirm &&
 pacman -S linux-zen\
     scx-scheds \
     wireless-regdb \
@@ -27,7 +28,6 @@ pacman -S linux-zen\
     sof-firmware \
     openssh \
     firewalld \
-    iptables-nft \
     bluez-utils \
     dnsmasq \
     networkmanager \
