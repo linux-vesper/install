@@ -22,11 +22,11 @@ mkfs.vfat -F32 -S 4096 -n BOOT $DISKBOOT
 mkfs.ext4 -F -q -b 4096 /dev/mapper/proc &&
 mkfs.ext4 -F -q -b 4096 /dev/mapper/data &&
 
-mount /dev/proc /mnt &&
+mount /dev/mapper/proc /mnt &&
 mkdir -p /mnt/boot &&
 mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
 mkdir -p /mnt/home &&
-mount /dev/data /mnt/home &&
+mount /dev/mapper/data /mnt/home &&
 
 pacstrap /mnt base &&
 
