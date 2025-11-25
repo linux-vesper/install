@@ -65,7 +65,7 @@ systemctl enable --global gcr-ssh-agent.socket &&
 ## BOOTING
 mkdir -p /boot/{efi,kernel,loader} &&
 mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
-mv /boot/*-ucode.img /boot/kernel/ &&
+mv /boot/vmlinuz-linux-zen /boot/*-ucode.img /boot/kernel/ &&
 rm /etc/mkinitcpio.conf &&
 rm -fr /etc/mkinitcpio.conf.d/ &&
 rm /boot/initramfs-* &&
