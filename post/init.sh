@@ -21,7 +21,7 @@ locale-gen &&
 
 
 ## SERVICE
-systemctl enable gdm &&
+systemctl enable sddm &&
 systemctl enable iwd &&
 systemctl enable sshd &&
 systemctl enable nginx &&
