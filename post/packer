@@ -1,18 +1,26 @@
 DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
-    cosmic
-    cosmic-comp
-    cosmic-applets 
-    cosmic-app-library
-    cosmic-bg
-    cosmic-icon-theme    
-    cosmic-launcher
-    cosmic-notifications
-    power-profiles-daemon
-    gnome-keyring 
-    gvfs
-    gvfs-nfs 
-    gvfs-smb 
-    gvfs-dnssd
+    kylin-nm
+    peony
+    qt5-ukui-platformtheme
+    ukui-control-center
+    ukui-greeter
+    ukui-interface
+    ukui-media
+    ukui-menu
+    ukui-menus
+    ukui-notebook
+    ukui-notification-daemon
+    ukui-panel
+    ukui-power-manager
+    ukui-screensaver
+    ukui-session-manager
+    ukui-settings-daemon
+    ukui-sidebar
+    ukui-system-monitor
+    ukui-themes
+    ukui-wallpapers
+    ukui-window-switch
+    ukwm
     mkinitcpio 
     base-devel 
     mesa 
@@ -22,8 +30,7 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     firewalld 
     bluez-utils 
     dnsmasq 
-    networkmanager 
-    weston 
+    networkmanager  
     neovim 
     pipewire 
     pipewire-alsa 
@@ -41,4 +48,14 @@ DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
     btop 
     sddm
     firefox 
-    aria2"
+    aria2
+    hugo
+    nginx
+    gnome-calculator
+    firefox
+    rnote
+    okular
+    obsidian
+    firewalld
+    gnome-keyring
+    iwd"

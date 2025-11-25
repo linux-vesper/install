@@ -1,0 +1,23 @@
+# CREAMIE OS IMAGE PRESET
+# mkinitcpio preset file for the 'linux-lts' package
+
+
+ALL_kver="/boot/kernel/vmlinuz-linux-lts"
+ALL_config="/etc/mkinitcpio.d/default.conf"
+ALL_kerneldest="/boot/kernel/vmlinuz-linux-lts"
+
+
+PRESETS=('default')
+#PRESETS=('default' 'fallback')
+
+
+#default_config="/etc/mkinitcpio.conf"
+#default_image="/boot/vesper.img"
+default_uki="/boot/efi/linux/vesper.efi"
+#default_options="--splash /usr/share/systemd/bootctl/vesper.bmp"
+
+
+#fallback_config="/etc/mkinitcpio.conf"
+#fallback_image="/boot/vesper-fallback.img"
+#fallback_uki="/boot/efi/linux/vesper-fallback.efi"
+#fallback_options="-S autodetect"
