@@ -20,30 +20,7 @@ cp -fr /post/base/* / &&
 locale-gen &&
 
 
-# PROCESSOR
-procieidven=$(grep "vendor_id" /proc/cpuinfo | head -n 1 | awk '{print $3}')
 
-if [[ "$procieidven" == "GenuineIntel" ]]; then
-    pacman -S intel-ucode  --noconfirm
-elif [[ "$procieidven" == "AuthenticAMD" ]]; then
-    pacman -S amd-ucode  --noconfirm
-fi
-
-
-# GRAPHICAL
-graphidven=$(lspci | grep -i --color 'vga\')
-
-if [[ ! -z $(echo $graphidven | grep -i --color 'Intel Corporation') ]];then
-    echo "graphic intel"
-fi
-
-if [[ ! -z $(lspci | grep -i --color '3d\|NVIDIA') ]];then
-    echo "graphic nvidia"
-fi
-
-if [[ ! -z $(lspci | grep -i --color '3d\|AMD\|AMD/ATI\|RADEON') ]];then
-    echo "graphic radeon"
-fi
 
 
 ## SERVICE
