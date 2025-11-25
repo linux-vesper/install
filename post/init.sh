@@ -58,6 +58,7 @@ systemctl enable NetworkManager &&
 systemctl enable --global pipewire-pulse &&
 systemctl enable systemd-timesyncd.service &&
 systemctl enable waydroid-container.service &&
+systemctl enable --global gcr-ssh-agent.socket &&
 
 
 
