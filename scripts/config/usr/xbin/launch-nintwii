@@ -1,2 +1,0 @@
-#!/bin/bash
-weston --xwayland --shell=kiosk-shell.so -- gamemoderun dolphin-emu

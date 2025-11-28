@@ -1,10 +1,10 @@
 # CREAMY OS IMAGE PRESET
-# mkinitcpio preset file for the 'linux-lqx' package
+# mkinitcpio preset file for the 'linux-lts' package
 
 
-ALL_kver="/boot/kernel/vmlinuz-linux-lqx"
+ALL_kver="/boot/kernel/vmlinuz-linux-lts"
 ALL_config="/etc/mkinitcpio.d/default.conf"
-ALL_kerneldest="/boot/kernel/vmlinuz-linux-lqx"
+ALL_kerneldest="/boot/kernel/vmlinuz-linux-lts"
 
 
 PRESETS=('default')

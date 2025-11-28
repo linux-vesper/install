@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/usr/xbin/launch-plays1
-TryExec=/usr/xbin/launch-plays1
-Name=Playstation 1
-Keywords=session
-Comment=session

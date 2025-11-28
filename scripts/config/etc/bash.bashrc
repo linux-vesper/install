@@ -32,8 +32,8 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 
-## creamie bash themes
-function creamie_bashthemes() {
+## vepser bash themes
+function vesper_bashthemes() {
 
 	if [ $(id -u) -eq 0 ];then
 		PS1='\[\e[38;5;196m\](\#)\[\e[0m\] \[\e[38;5;196m\]\u\[\e[0m\]\[\e[38;5;196m\]@\[\e[0m\]\[\e[38;5;196m\]\h\[\e[0m\] \[\e[38;5;196m\](\[\e[0m\] \[\e[38;5;196m\]\t\[\e[0m\] \[\e[38;5;196m\]|\[\e[0m\] \[\e[38;5;196m\]\w\[\e[0m\] \[\e[38;5;196m\])\n\[\e[0m\] \[\e[38;5;196m\]|-->\[\e[0m\] '
@@ -43,4 +43,4 @@ function creamie_bashthemes() {
 		PS1='\[\e[38;5;214m\](\[\e[38;5;215m\]\#\[\e[38;5;214m\])\[\e[0m\] \[\e[38;5;214m\]\u\[\e[38;5;208m\]@\[\e[38;5;214m\]\h\[\e[0m\] \[\e[38;5;214m\](\[\e[0m\] \[\e[38;5;45m\]\t\[\e[0m\] \[\e[38;5;214m\]|\[\e[0m\] \[\e[38;5;45m\]\w\[\e[0m\] \[\e[38;5;214m\])\n\[\e[0m\] \[\e[38;5;214m\]|-->\[\e[0m\] '
 	fi
 }
-#creamie_bashthemes
+vesper_bashthemes
