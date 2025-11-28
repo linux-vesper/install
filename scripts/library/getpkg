@@ -1,3 +1,24 @@
 #!/bin/bash
 
-appdir=../..
+
+source "$1/scripts/chroot/packer"
+
+
+## validate packar
+if [[ -z $( echo $DISTRO_INSTALLATION_PACKAGE ) ]];then
+    echo "error : Package list is empty" &&
+    exit
+fi
+
+
+## prepare packar
+if [[ -d $1/packer ]]; then
+    rm -fr $1/packer/*
+else
+    mkdir $1/packer
+fi
+
+
+## download packar
+sudo pacman --sync --downloadonly --cachedir $1/packer $DISTRO_INSTALLATION_PACKAGE --noconfirm &&
+repo-add $1/packer/vesper.db.tar.zst $1/packer/*.pkg.tar.zst
