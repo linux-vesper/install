@@ -1,5 +1,0 @@
-DISKBOOT=/dev/sda1
-DISKPROC=/dev/sda3
-DISKDATA=/dev/sda4
-USERNAME=adzani
-TIMEZONE=Asia/Jakarta

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/xbin/launch-plays2
+TryExec=/usr/xbin/launch-plays2
+Name=Playstation 2
+Keywords=session
+Comment=session

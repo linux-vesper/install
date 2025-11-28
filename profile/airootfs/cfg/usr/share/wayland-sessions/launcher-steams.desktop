@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Steam Desktop
+Comment=Steam full desktop running
+Exec=/usr/xbin/launch-steam
+TryExec=/usr/xbin/launch-steam
+Type=Application

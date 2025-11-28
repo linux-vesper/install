@@ -1,0 +1,11 @@
+NAME="Creamie"
+PRETTY_NAME="Creamie"
+ID=creamie
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://creamie.yuros.org"
+DOCUMENTATION_URL="https://creamie.yuros.org/docs"
+SUPPORT_URL="https://creamie.yuros.org/forum"
+BUG_REPORT_URL="https://creamie.yuros.org/issues"
+PRIVACY_POLICY_URL="https://creamie.org/privacy/"
+LOGO=creamie-linux

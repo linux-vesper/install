@@ -1,0 +1,33 @@
+#!/bin/bash
+
+appdir=/install/scripts
+
+if [[ $1 == "--install" ]];then
+    /bin/bash $appdir/library/installs &&
+    exit
+fi
+
+if [[ $1 == "--build" ]];then
+   /bin/bash $appdir/library/build &&
+   exit
+fi
+
+if [[ $1 == "--deploy" ]];then
+    /bin/bash $appdir/library/deploy &&
+    exit
+fi
+
+if [[ $1 == "--reset" ]];then
+    /bin/bash $appdir/library/reseter &&
+    exit
+fi
+
+if [[ $1 == "--update" ]];then
+    echo "pull repository" && git pull && 
+    echo "populating file" && git add . &&
+    echo "commit  changes" && git commit -m "$(date)" &&
+    echo "push to gitrepo" && git push &&
+    exit
+fi
+
+echo "Error : vesper command need additional paramater"

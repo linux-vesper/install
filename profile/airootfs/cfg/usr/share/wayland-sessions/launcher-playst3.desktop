@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/xbin/launch-plays3
+TryExec=/usr/xbin/launch-plays3
+Name=Playstation 3
+Keywords=session
+Comment=session

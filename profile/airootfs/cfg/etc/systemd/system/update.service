@@ -1,0 +1,6 @@
+[Unit]
+Description=Creamie auto system update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman --sync --refresh --sysupgrade --noconfirm

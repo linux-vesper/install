@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/xbin/launch-ubisof
+TryExec=/usr/xbin/launch-ubisof
+Name=Ubisoft Connect
+Keywords=session
+Comment=session

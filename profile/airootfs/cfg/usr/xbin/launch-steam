@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /usr/bin/gamescope -e -- /usr/bin/steam -tenfoot

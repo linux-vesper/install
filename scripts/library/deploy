@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## blackmoor ( localrepoi )
+## scp distrib/* loki@blackred.srv:/srv/site/blackmoor/repoiso
+
+
+## sourceforge ( globalrepo )
+## scp distrib/* yurosmain@frs.sourceforge.net:/home/frs/project/creami/release-alpha-01

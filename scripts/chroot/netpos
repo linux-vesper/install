@@ -1,0 +1,76 @@
+#!/bin/bash
+
+source /post/config
+
+
+#HOSTNAME
+echo "vesper" > /etc/hostname &&
+
+
+## LOCALTIME 
+ln -sf /usr/share/zoneinfo/$TIMEZONE /etc/localtime &&
+hwclock --systohc &&
+timedatectl set-ntp true &&
+timedatectl set-timezone $TIMEZONE &&
+
+
+## CONFIG
+#cp -fr /post/base/* / &&
+
+
+## LOCALE
+locale-gen &&
+
+
+##
+## BOOTUPS
+mkdir -p /boot/{efi,kernel,creamy} &&
+mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
+mv /boot/*-ucode.img /boot/kernel/ &&
+rm /etc/mkinitcpio.conf &&
+rm -fr /etc/mkinitcpio.conf.d/ &&
+
+
+##
+## SERVICE
+systemctl enable sddm &&
+systemctl enable dnsmasq &&
+systemctl enable sshd &&
+systemctl enable update.timer &&
+systemctl enable firewalld &&
+systemctl enable NetworkManager &&
+systemctl enable --global pipewire-pulse &&
+systemctl enable systemd-timesyncd.service &&
+
+
+##
+## BINPATH
+chmod +x /usr/xbin/* &&
+chmod +x /usr/rbin/* &&
+
+
+##
+## SESSION
+rm /usr/share/wayland-sessions/weston.desktop &&
+
+
+
+## BOOTING
+echo "root=$DISKPROC" > /etc/cmdline.d/01-boot.conf &&
+mkinitcpio -P &&
+
+
+## GRUBERS
+echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub && 
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=vesper &&
+grub-mkconfig -o /boot/grub/grub.cfg &&
+
+
+## USERADD
+useradd -m $USERNAME &&
+usermod -aG wheel $USERNAME &&
+echo "add user password" &&
+passwd $USERNAME &&
+
+
+echo "installation finish, close chroot"

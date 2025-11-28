@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/xbin/launch-xbox3
+TryExec=/usr/xbin/launch-xbox3
+Name=Xbox 360
+Keywords=session
+Comment=session

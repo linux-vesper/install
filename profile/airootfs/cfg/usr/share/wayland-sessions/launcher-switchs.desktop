@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Nintendo Switch
+Exec=/usr/xbin/launch-switch
+TryExec=/usr/xbin/launch-switch
+Type=Application
+Keywords=session
+Comment=session

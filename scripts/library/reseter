@@ -1,0 +1,74 @@
+#!/bin/bash
+
+appdir=/install/scripts
+
+
+## CONFIGURE
+vim $appdir/chroot/config &&
+source $appdir/chroot/packer
+source $appdir/chroot/config
+
+
+
+## CLEANSING
+if [[ ! -z $(findmnt --mountpoint /mnt) ]]; then 
+    umount -R /mnt
+fi
+
+
+## VESPERSYS
+mkfs.ext4 -F -q -b 4096 $DISKPROC &&
+mount $DISKPROC /mnt &&
+
+
+## BOOTINGUP
+mkdir -p /mnt/boot && 
+mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
+
+
+## USERDATUM
+mkdir -p /mnt/home &&
+mount $DISKDATA /mnt/home &&
+
+
+
+# PROCESSOR
+procieidven=$(grep "vendor_id" /proc/cpuinfo | head -n 1 | awk '{print $3}')
+
+if [[ "$procieidven" == "GenuineIntel" ]]; then
+    pacstrap /mnt intel-ucode $DISTRO_INSTALLATION_PACKAGE
+elif [[ "$procieidven" == "AuthenticAMD" ]]; then
+    pacstrap /mnt amd-ucode $DISTRO_INSTALLATION_PACKAGE
+fi
+
+
+
+# GRAPHICAL
+graphidven=$(lspci | grep -i --color 'vga\')
+
+if [[ ! -z $(echo $graphidven | grep -i --color 'Intel Corporation') ]];then
+    pacstrap /mnt vulkan-intel
+fi
+
+if [[ ! -z $(lspci | grep -i --color '3d\|NVIDIA') ]];then
+   pacstrap /mnt nvidia-utils
+fi
+
+if [[ ! -z $(lspci | grep -i --color '3d\|RADEON') ]];then
+    pacstrap /mnt vulkan-radeon 
+fi
+
+
+# DISCONFIG
+cp -fr $appdir/config/* /mnt &&
+cp -fr $appdir/chroot   /mnt/post &&
+
+
+
+# CONFIGURE
+genfstab -U /mnt > /mnt/etc/fstab &&
+arch-chroot /mnt /bin/bash /post/netpos &&
+
+
+# FINISHING
+rm -fr /mnt/post && sleep 2 && umount -R /mnt && reboot

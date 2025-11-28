@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/xbin/launch-nintwii
+TryExec=/usr/xbin/launch-nintwii
+Name=Nintendo Wii
+Keywords=session
+Comment=session

@@ -1,0 +1,10 @@
+[Unit]
+Description=Creamie auto system update hourly
+
+[Timer]
+OnCalendar=hourly
+Persistent=true
+Unit=update.service
+
+[Install]
+WantedBy=timers.target
