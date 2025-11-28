@@ -1,5 +1,0 @@
-#!/bin/bash
-#gamescope -W 1920 -H 1080 -r 60 -- xdg-open "heroic://launch/aPLk9n1mU6opAHEH1DYkiM"
-#gamescope -W 1920 -H 1080 -r 60 -f -- umu-run "$HOME/Games/Heroic/Prefixes/default/sideload/pfx/drive_c/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe" -opengl -SkipBuildPatchPrereq
-#gamescope -W 1920 -H 1080 -r 60 -f -- /home/family/.config/heroic/tools/proton/GE-Proton-latest/proton run "$HOME/Games/Heroic/Prefixes/default/sideload/pfx/drive_c/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe"
-gamescope -W 1920 -H 1080 -r 60 -f -- umu-run "$HOME/Games/Heroic/Prefixes/default/sideload/pfx/drive_c/Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe" -opengl -SkipBuildPatchPrereq

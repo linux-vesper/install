@@ -1,3 +1,0 @@
-#!/bin/bash
-# gamescope -W 1920 -H 1080 -r 60 -- /usr/pbin/plays2.AppImage
-weston --xwayland --shell=kiosk-shell.so -- gamemoderun /usr/pbin/plays2.AppImage -bigpicture -fullscreen

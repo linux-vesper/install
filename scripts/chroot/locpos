@@ -15,7 +15,7 @@ timedatectl set-timezone $TIMEZONE &&
 
 
 ## CONFIG
-cp -fr /post/base/* / && 
+## cp -fr /post/base/* / && 
 
 
 
@@ -25,9 +25,10 @@ locale-gen &&
 
 ##
 ## BOOTUPS
-mkdir -p /boot/{efi,kernel,loader} &&
+mkdir -p /boot/{efi,kernel,vesper} &&
 mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
-mv /boot/*-ucode.img /boot/kernel/ &&
+mv /boot/vmlinuz-linux-lts /boot/*-ucode.img /boot/kernel/ &&
+rm /boot/initramfs* &&
 rm /etc/mkinitcpio.conf &&
 rm -fr /etc/mkinitcpio.conf.d/ &&
 

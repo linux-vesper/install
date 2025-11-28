@@ -24,7 +24,7 @@ locale-gen &&
 
 ##
 ## BOOTUPS
-mkdir -p /boot/{efi,kernel,creamy} &&
+mkdir -p /boot/{efi,kernel,vesper} &&
 mkdir -p /boot/efi/{boot,linux,systemd,rescue} &&
 mv /boot/vmlinuz-linux-lts /boot/*-ucode.img /boot/kernel/ &&
 rm /boot/initramfs* &&
