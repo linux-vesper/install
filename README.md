@@ -1,22 +1,23 @@
-# Installation Script
+# Installation Script Vesper-Os
 Installation scripts for Vesper OS
 
-# Vesper-Os
-# kernel
+## System Information
+### kernel
 1. lts
 
-# UI
+### dekstop
 1. plasma
 2. sddm
 
-# core application
-1. merkuro ( to do list )
-2. kalk    ( calculator )
-3. okular  ( file viewer )  
-3. osidian ( note taking app )
-4. obs-studio ( screen recording )
+### core application
+1. merkuro      ( to do list )
+2. kalk         ( calculator )
+3. okular       ( file viewer )  
+3. osidian      ( note taking app )
+4. obs-studio   ( screen recording )
 
-# application
+
+### uniq application
 1. hugo
 2. grafitty
 3. nginx
