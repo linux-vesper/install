@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="creamy"
-iso_label="creamy_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
-iso_publisher="Creamy OS <https://blackroom.yuros.org/creamy>"
-iso_application="Creamy Recovery"
+iso_name="vesper"
+iso_label="vepser_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
+iso_publisher="Vesper OS <https://blackroom.yuros.org/vesper>"
+iso_application="Vesper Recovery"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="arch"
 buildmodes=('iso')
