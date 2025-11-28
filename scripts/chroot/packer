@@ -1,10 +1,11 @@
 DISTRO_INSTALLATION_PACKAGE="base
     base-devel
     linux-lts
+    scx-scheds
+    wireless-regdb 
     grub
     efibootmgr
     os-prober
-    wireless-regdb 
     mkinitcpio 
     mesa 
     kitty 
