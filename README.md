@@ -26,4 +26,6 @@ Installation scripts for Vesper OS
 |     | mendeley   |                        |        |
 |     | zotero     |                        |        |
 |     | teams      |                        |        |
+
+
 type example= core, extra, flathub, aur, webapp, android 
